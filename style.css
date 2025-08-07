@@ -1,0 +1,360 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ff6347;
+}
+
+main {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.cake-container {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+#cake {
+  width: 357px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+}
+
+#knife {
+  position: absolute;
+  width: 100px;
+  top: 390px;
+  left: 450px;
+  cursor: grab;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+#candle {
+  position: absolute;
+  top: 172px;
+  left: 120px;
+  width: 92px;
+  transition: opacity 0.3s ease;
+}
+
+#message {
+  font-size: 1.5rem;
+  color: #32cd32;
+  margin-top: 20px;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #808080;
+}
+
+
+/* new */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb, #2575fc,#fcb69f, #a18cd1, #fbc2eb, #ff9a9e,#89f7fe, #66a6ff, #fff1eb, #ace0f9);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+  color: white;
+  text-align: center;
+  /* color: #333; */
+}
+
+@keyframes gradientShift {
+  0% {background-position: 0% 25%;}
+  25% {background-position: 25% 50%;}
+  50% {background-position: 100% 50%;}
+  75% {background-position: 50% 75%;}
+  100% {background-position: 0% 50%;}
+}
+
+header {
+  padding: 2rem 1rem;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  /* font-size: 3rem; */
+  color: #d63384;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+/* Bokeh Light Dots
+.bokeh {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(175, 205, 24, 0.927);
+  box-shadow: 0 0 8px rgba(42, 184, 224, 0.8);
+  animation: floatBokeh 20s linear infinite;
+  pointer-events: none;
+}
+@keyframes floatBokeh {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+} */
+
+/* Glowing Dots Container */
+/* .glow-dot {
+  position: absolute;
+  mix-blend-mode: screen;
+
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatGlow 12s linear infinite;
+  opacity: 0.6;
+  box-shadow: 0 0 12px 6px rgba(22, 19, 19, 0.2);
+}
+
+/* Animation for glowing floating effect */
+/* @keyframes floatGlow {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(50vh) scale(1);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}  */
+
+/* Balloon Base Style */
+#balloon-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: red;
+  box-shadow: inset -5px -5px 10px rgba(255,255,255,0.2);
+  animation: floatBalloon 12s linear forwards;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.balloon .string {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  transform: translateX(-50%);
+  background: #333;
+  background: linear-gradient(#555, #999);
+  animation: sway 3s ease-in-out infinite;
+  border-radius: 1px;
+}
+
+.balloon:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+              0 0 30px rgba(255, 255, 255, 0.5),
+              0 0 40px rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+
+/* Balloon floating animation */
+@keyframes floatBalloon {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(-10vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh);
+    opacity: 0;
+  }
+}
+
+
+/* Balloon pop burst animation */
+
+
+.burst-line {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  opacity: 1;
+  animation: burstOut 0.3s ease-out forwards;
+}
+
+@keyframes burstOut {
+  0% {
+    transform: scaleY(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1.8) translateY(-40px);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+/* Swaying string effect */
+@keyframes sway {
+  0%, 100% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+}
+
+
+/* sending lots of love for my love */
+
+#heart-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  color: #ff4d6d;
+  animation: floatUp 6s ease-out forwards;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+#love-message {
+  position: fixed;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #e91e63;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+  z-index: 10000;
+  font-family: 'Courier New', cursive;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* Wish Angel */
+
+/* #angel {
+  position: fixed;
+  top: -100px; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px;
+  opacity: 0;
+  transition: top 5s ease, opacity 5s ease;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#angel.visible {
+  top: 100px; 
+  opacity: 1;
+}
+
+#wish-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff8dc;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  max-width: 300px;
+  width: 80%;
+  z-index: 9999;
+}
+
+#wish {
+  width: 100%;
+  height: 60px;
+  resize: none;
+  margin-bottom: 10px;
+} */
+
