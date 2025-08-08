@@ -8,7 +8,7 @@ const hbdmusic = new Audio("assets/HBD.mp3");
 let isDragging = false;
 let cakeCut = false;
 let soundPlayed = false;
-
+hbdmusic.loop = true;
 knife.style.cursor = "grab";
 
 knife.addEventListener("mousedown", () => {
