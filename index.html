@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +8,27 @@
 </head>
 
 <body>
+  <div id="confetti-overlay" style="
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  z-index: 9999;
+  flex-direction: column;
+">
+ <div id="birthday-text" style="opacity: 0; transition: opacity 0.5s ease; position: relative; z-index: 10000;">
+  🎉 Happy Birthday Manimithra 🔔! 🎉
+</div>
+  <!-- <canvas id="confetti-canvas" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events:none;"></canvas> -->
+  <canvas id="fireworks" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000"></canvas>
+
+</div>
+
   <header>
     <h2>🎊 Happy Birthday 🔔uhh! 🎈 🎊</h2>
   </header>
@@ -18,7 +38,14 @@
       <img id="knife" src="assets/knife.png" alt="Knife" />
       <img id="candle" src="assets/candle_with_flame.png" alt="Candle" />
     </div>
-
+    <div id="gift-box"></div>
+    <div id="gift-message">
+      🎉 Dear <span class="glow">Manimithra</span>! 🎉<br/> 
+      <br/>Tadaa 24 came up !!! Wishing you a year full of love, laughter, and unforgettable moments! 💖✨ "Great Power comes with Great responsibilities" Remember your power has increased and more responsibilities on the way. Dont let your will power goes down in any situation let the life increase its pace.Take it up with lots of love,courage and and joy.Let the Success always be yours.I will be there for you always in your thick and thin. Real party gonna begin just slay it with your gorgeous eyes as you always do it to me😉.
+      <br/><br/>இனிய பிறந்த நாள் வாழ்த்துக்கள் 🥳✨
+      <span id="signature" style="position: absolute; bottom: 5px; right: 10px;">- SARRAN</span>
+    </div>
+    
     <!-- <div id="angel" class="hidden">👼</div>
 
     <div id="wish-container" class="hidden">
